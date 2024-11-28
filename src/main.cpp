@@ -48,7 +48,8 @@ void connectToOrthanc(const std::string& url, const std::string& username = "", 
 
 int main() {
     // URL del servidor Orthanc
-    std::string serverUrl = "http://localhost:8042/";
+    //std::string serverUrl = "http://localhost:8042/";
+    std::string serverUrl = "http://raspberry.local:8042/";
 
     // Usuario y contraseña (si aplica)
     std::string username = "orthanc";
