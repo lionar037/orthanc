@@ -1,6 +1,7 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
+LDFLAGS = -lcurl
 SRC_DIR = src
 OBJ_DIR = obj
 BIN_DIR = bin
@@ -16,7 +17,7 @@ all: $(TARGET)
 # Crear el ejecutable
 $(TARGET): $(OBJECTS)
 	@mkdir -p $(BIN_DIR)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 	@echo "Compilación completa: $@"
 
 # Crear archivos objeto
